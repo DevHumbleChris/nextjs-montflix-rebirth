@@ -4,6 +4,6 @@
 
 @layer base {
     body {
-        @apply bg-[#06202A] text-gray-300;
+        @apply bg-gradient-to-r from-[#c94b4b] to-[#4b134f] text-gray-300;
     }
 }
