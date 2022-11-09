@@ -3,7 +3,6 @@ import React from "react";
 
 export default function Thumbnail({ result }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
-  console.log(result);
   return (
     <div className="p-2 group cursor-pointer transition duration-200 ease-in transform sm:scale-105 hover:z-50 my-4mx-2 rounded-xl">
       <Image
