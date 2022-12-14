@@ -7,11 +7,12 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        "3xl": "2000px"
-      }
+        "3xl": "2000px",
+      },
+    },
+    fontFamily: {
+      'rubik': ["Rubik Gemstones", "cursive"],
     },
   },
-  plugins: [
-    require('tailwind-scrollbar-hide')
-  ],
-}
+  plugins: [require("tailwind-scrollbar-hide")],
+};
