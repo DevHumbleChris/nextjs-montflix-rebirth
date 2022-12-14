@@ -4,9 +4,8 @@ import React from "react";
 
 export default function Thumbnail({ result }) {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
-  console.log(result)
   return (
-    <Link href={`/film/${result.id}`} className="p-2 group cursor-pointer transition duration-200 ease-in transform sm:scale-105 hover:z-50 my-4mx-2 rounded-xl">
+    <Link href={ result.title ? `/movie/${result.id}`: `/tv/${result.id}`} className="p-2 group cursor-pointer transition duration-200 ease-in transform sm:scale-105 hover:z-50 my-4mx-2 rounded-xl">
       <Image
         layout="responsive"
         className="rounded-xl"

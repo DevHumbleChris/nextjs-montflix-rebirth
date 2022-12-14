@@ -1,3 +1,4 @@
+import axios from "axios";
 import Head from "next/head";
 import Nav from "../components/Nav";
 import Results from "../components/Results";
@@ -19,11 +20,11 @@ export default function Home({ results }) {
 
 export async function getServerSideProps({ query }) {
   const genre = query.genre;
-  const request = await fetch(
+  const request = await axios.get(
     `https://api.themoviedb.org/3${
       requests[genre]?.url || requests.trending.url
     }`
-  ).then((res) => res.json());
+  ).then((res) => res.data);
 
   return {
     props: {
